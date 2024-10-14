@@ -1,6 +1,6 @@
 //manipulação de strings
-const frases = "   Hello World! "
+const frase = "   Hello World! "
 
-const palavras = frases.trim()//.trim tira os espaços presentes na frase
-console.log(frases)
+const palavras = frase.trim()//.trim tira os espaços presentes na frase
+console.log(frase)
 console.log(palavras)
