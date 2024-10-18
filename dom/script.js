@@ -21,3 +21,24 @@ link.removeAttribute("target")
 const elemento = document.querySelector("#meuId")
 element.classList.add("novaClasse")
 element.classList.remove("minhaClasse")//tirei a class .minhaClasse
+element.classList.toggle("outraClasse")//se não existe adiciona
+element.classList.toggle("outraClasse")// se existe remove
+
+//manipulação de CSS
+const elemento3 = document.querySelector("#meuId")
+elemento3.style.color  = "blue"
+elemento3.style.backgroundColor = "red"
+
+//navegação entre nós
+const element4 = document.querySelector("#meuInput")
+const pai = element4.parentNode
+console.log(pai)
+
+//obter o primeiro filho
+const primeiroFilho = pai.firstChild
+console.log(primeiroFilho)
+
+const ultimoFilho = pai.lastChild
+console.log(ultimoFilho)
+
+//manipulação de estrutura do DOM
