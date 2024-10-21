@@ -42,3 +42,48 @@ const ultimoFilho = pai.lastChild
 console.log(ultimoFilho)
 
 //manipulação de estrutura do DOM
+const novoElemento = document.createElement("div")
+console.log(novoElemento)
+novoElemento.textContent = "Minha div de Javascript"
+console.log(novoElemento)
+document.body.appendChild(novoElemento) //acrescenta no final
+
+document.body.insertBefore(novoElemento, pai)
+
+//document.body.removeChild(element) remove o elemento #meuId
+
+//Eventos
+//click
+const botao = document.querySelector("button")
+botao.addEventListener("click", function(){
+    console.log("botão clicado")
+} )
+
+//mouse
+const elemento5 = document.querySelector("#meuFormulario")
+elemento5.addEventListener("mouseover", function(){
+    console.log("O mouse passou aqui")
+})
+
+//teclado
+const campoInput = document.querySelector("#meuInput")
+campoInput.addEventListener("keydown", function(){
+    console.log("Tecla pressionado")
+})
+
+//formulario
+const form = document.querySelector("form")
+form.addEventListener("submit", function(event){
+    event.preventDefault()
+    console.log("Formulário enviado")
+})
+
+//propagação de eventos
+document.querySelector("#elementoPai").addEventListener("click", function(){
+    console.log("clique capturado no pai")
+})
+
+document.querySelector("#elementoFilho").addEventListener("click", function(event){
+    event.stopPropagation()
+    console.log("clique capturado no filho")
+})
